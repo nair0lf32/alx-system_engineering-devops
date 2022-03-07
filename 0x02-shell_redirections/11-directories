@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -al ./* -d | wc -l
+find . -mindepth 1 -type d | wc -lc
