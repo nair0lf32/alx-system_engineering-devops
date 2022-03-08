@@ -5,3 +5,4 @@
 - 2-path: adds /action to the PATH
 - 3-paths: Counts the number of directories in the PATH
 - 4-global_variables: prints all global variables
+- 5-local_variables: prints all local variables
