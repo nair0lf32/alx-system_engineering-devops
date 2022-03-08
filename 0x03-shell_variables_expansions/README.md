@@ -4,3 +4,4 @@
 - 1-hello_you: prints a greeting to current user
 - 2-path: adds /action to the PATH
 - 3-paths: Counts the number of directories in the PATH
+- 4-global_variables: prints all global variables
