@@ -1,2 +1,2 @@
 #!/bin/bash
-count $PATH
+echo count $PATH
