@@ -1,2 +1,2 @@
 #!/bin/bash
-echo count $PATH
+echo $PATH | tr ':' ' ' | wc -w 
