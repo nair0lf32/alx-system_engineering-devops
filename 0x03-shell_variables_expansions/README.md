@@ -16,3 +16,4 @@
 - 13-print_float: prints a number with two decimal places, followed by a new line
 - 100-decimal_to_hexadecimal: converts a decimal number to hexadecimal
 - 101-rot13: script that encodes and decodes text using the rot13 encryption. Assume ASCII
+- 102-odd: prints every other line from the input, starting with the first line
