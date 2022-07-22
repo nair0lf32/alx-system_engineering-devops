@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Lists all my processes
 
-ps -auH
+ps -auf
