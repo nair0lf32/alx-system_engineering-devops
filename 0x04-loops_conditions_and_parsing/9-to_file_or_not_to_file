@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Gives information about the School file
 
-filename="School"
+filename="school"
 
 if [ -e $filename ]
 then
