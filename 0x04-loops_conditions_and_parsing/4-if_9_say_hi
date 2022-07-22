@@ -10,4 +10,4 @@ do
         echo "Hi"
     fi
     n=$(( n + 1 ))
-done
+done;

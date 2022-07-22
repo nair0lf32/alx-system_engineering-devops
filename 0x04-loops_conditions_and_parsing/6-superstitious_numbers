@@ -19,4 +19,4 @@ do
             ;;
     esac
     n=$(( n + 1 ))
-done
+done;

@@ -18,4 +18,4 @@ do
         echo $n
     fi
     n=$(( n + 1 ))
-done
+done;
