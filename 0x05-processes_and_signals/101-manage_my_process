@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# manages the manage_my_process program
+# manages the manage_my_process script
 
 if [ "$#" == 1 ]
 then
