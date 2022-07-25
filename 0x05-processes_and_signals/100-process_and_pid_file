@@ -5,7 +5,7 @@
 # Displays "Y U no love me?!" when SIGINT received
 # Deletes /var/run/myscript.pid and terminates itself when SIGQUIT or SIGTERM received
 
-responses(){
+action(){
     echo "$1"
     if [ "$1" -eq 2 ]; then
         echo "Y U no love me?!"
@@ -22,7 +22,7 @@ responses(){
 echo "$$" > /var/run/myscript.pid
 until false; do
     echo "To infinity and beyond"
-    trap 'responses 2' SIGINT
-    trap 'responses 15' SIGTERM
-    trap 'responses 3' SIGQUIT
+    trap 'action 2' SIGINT
+    trap 'action 15' SIGTERM
+    trap 'action 3' SIGQUIT
 done
