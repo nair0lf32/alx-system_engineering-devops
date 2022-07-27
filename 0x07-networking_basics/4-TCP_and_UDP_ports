@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Displays all listening sockets ports
+
+netstat -lp

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Displays all ipv4 addresses
+
+ifconfig -a | grep inet | cut -d: -f2 | cut -d" "  -f1

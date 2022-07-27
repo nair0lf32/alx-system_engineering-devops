@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Simple port listenner
+
+nc -lnp 98
