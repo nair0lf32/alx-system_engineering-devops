@@ -1,4 +1,4 @@
-#Kills the killmenow process
+# Kills the killmenow process
 exec{'pkill -f killmenow':
-path  => '/'
+path  => '/usr/bin/:/usr/local/bin/:/bin/'
 }
