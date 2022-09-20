@@ -2,5 +2,5 @@
 # Install nginx on web-01 server
 apt-get update
 apt-get install -y nginx
-echo "Hello World!" > /usr/share/nginx/html/index.html
-sudo systemctl restart nginx
+echo "Hello World!" > /var/www/html/index.html
+service nginx restart
