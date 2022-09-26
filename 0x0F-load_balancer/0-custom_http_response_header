@@ -11,12 +11,9 @@ _HEADER="\n\tadd_header X-Served-By $HOSTNAME;\n"
 
 apt-get -y update && apt-get -y install nginx
 ufw allow 'Nginx HTTP'
-
 echo "$MSG" > "$INDEX_FILE"
-sed -i "37i\ $REDIRECT" "$INDEX_FILE"
-
 echo "$ERROR_MSG" > "$ERROR_FILE"
-sed -i "37i\ $ERROR_REDIRECT" "$INDEX_FILE"
-
-sed -i "37i\ $_HEADER" "$INDEX_FILE"
+sed -i "37i\ $REDIRECT" /etc/nginx/sites-available/default
+sed -i "37i\ $ERROR_REDIRECT" /etc/nginx/sites-available/default
+sed -i "37i\ $_HEADER" /etc/nginx/nginx.conf
 service nginx restart
