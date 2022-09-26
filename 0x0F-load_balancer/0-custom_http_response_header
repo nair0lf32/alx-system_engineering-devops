@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Configures web-02 nginx server
+
+INDEX_FILE="/var/www/html/index.html"
+MSG="Hello World!"
+ERROR_MSG="Ceci n'est pas une page"
+ERROR_FILE="/var/www/html/404.html"
+REDIRECT="\n\tlocation /redirect_me {\n\t\treturn 301 https://youtu.be/dQw4w9WgXcQ;\n\t}\n"
+ERROR_REDIRECT="\n\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}\n"
+_HEADER="\n\tadd_header X-Served-By $HOSTNAME;\n"
+
+apt-get -y update && apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+
+echo "$MSG" > "$INDEX_FILE"
+sed -i "37i\ $REDIRECT" "$INDEX_FILE"
+
+echo "$ERROR_MSG" > "$ERROR_FILE"
+sed -i "37i\ $ERROR_REDIRECT" "$INDEX_FILE"
+
+sed -i "37i\ $_HEADER" "$INDEX_FILE"
+service nginx restart
