@@ -5,13 +5,13 @@ show_subdomains () {
     echo "$2 $line" | awk '{print "The subdomain "$1" is a "$2" record and points to "$3""}'
 }
 
-if [ "$#" -eq 1 ]
+if [ "$#" == 1 ]
 then
   show_subdomains "$1" "www"
   show_subdomains "$1" "lb-01"
   show_subdomains "$1" "web-01"
   show_subdomains "$1" "web-02"
-elif [ "$#" -eq 2 ]
+elif [ "$#" == 2 ]
 then
   show_subdomains "$1" "$2"
 fi
