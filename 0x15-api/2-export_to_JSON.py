@@ -4,8 +4,8 @@ extend 0-gather_data_from_an_API.py to export data in the JSON format
 """
 
 from requests import get
-import sys
 import json
+import sys
 
 
 if __name__ == "__main__":
@@ -18,9 +18,9 @@ if __name__ == "__main__":
     tasks = []
     for task in todo:
         t_dict = {}
-        t_dict.update({"user_ID": sys.argv[1], "username": names.get(
-            "username"), "completed": task.get("completed"),
-                          "task": task.get("title")})
+        t_dict.update({"task": task.get("title"), "completed": task.get(
+            "completed"), "username": names.get("username")})
         tasks.append(t_dict)
+
     with open("{}.json".format(sys.argv[1]), 'w') as f:
         json.dump({sys.argv[1]: tasks}, f)
