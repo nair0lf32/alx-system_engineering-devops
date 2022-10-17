@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-using the REST API returns information about TODO list progress for a given employee ID
+using the REST API returns information about
+TODO list progress for a given employee ID
 """
 
 from requests import get
@@ -14,7 +15,7 @@ if __name__ == '__main__':
     names = get(n_endpoint).json()
     tasks = len(todo)
     completed = len([task for task in todo
-                         if task.get("completed")])
+                    if task.get("completed")])
     name = names.get("name")
     print("Employee {} is done with tasks({}/{}):"
           .format(name, completed, tasks))
