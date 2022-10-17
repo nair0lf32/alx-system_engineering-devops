@@ -24,8 +24,8 @@ if __name__ == "__main__":
         for task in todo:
             t_dict = {}
             t_dict.update({"username": names.get("username"),
-                              "task": task.get("title"),
-                              "completed": task.get("completed")})
+                          "task": task.get("title"),
+                           "completed": task.get("completed")})
             tasks.append(t_dict)
 
         data_dict.update({user.get("id"): tasks})
