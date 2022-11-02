@@ -5,6 +5,7 @@ of the first 10 hot posts for a given subreddit."""
 
 def top_ten(subreddit):
     """function to query the Reddit API"""
+
     import requests
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
